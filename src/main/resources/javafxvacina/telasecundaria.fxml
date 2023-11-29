@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxvacina.TelaSecundariaController">
    <children>
-      <TextField fx:id="codigo2TextFIeld" layoutX="215.0" layoutY="53.0" promptText="codigo vacina" />
+      <TextField fx:id="codigo2TextFIeld" disable="true" layoutX="215.0" layoutY="53.0" promptText="codigo vacina" />
       <TextField fx:id="nome2TextFIeld" layoutX="215.0" layoutY="86.0" promptText="nome da vacina" />
       <TextField fx:id="descricao2TextField" layoutX="215.0" layoutY="118.0" prefHeight="180.0" prefWidth="304.0" promptText="descricao da vacina" />
       <Label layoutX="153.0" layoutY="57.0" text="Código:" />

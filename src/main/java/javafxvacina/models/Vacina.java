@@ -5,7 +5,17 @@ public class Vacina {
     private Long codigo;
     private String nome;
     private String descricao;
+    private Situacao situacao;
+    //ALTER TABLE vacina ADD COLUMN situacao text DEFAULT 'ATIVO'; FAZER ISSO NO BANCO
     
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
+
     public Vacina() {
         codigo = -1L;
         nome = "sem nome";

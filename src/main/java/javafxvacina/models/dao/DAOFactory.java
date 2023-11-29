@@ -8,11 +8,27 @@ public class DAOFactory {
 
     private Connection conexao = null;
 
-    public VacinaDAO criarVacinaDAO( ) {
+    public VacinaDAO criarVacinaDAO() {
         if (conexao == null) {
             throw new IllegalStateException("Abra uma conexão antes de criar um DAO.");
         } else {
             return new VacinaDAO(conexao);
+        }
+    }
+
+    public PessoaDAO criarPessoaDAO() {
+        if (conexao == null) {
+            throw new IllegalStateException("Abra uma conexão antes de criar um DAO.");
+        } else {
+            return new PessoaDAO(conexao);
+        }
+    }
+
+     public AplicacaoDAO criarAplicacaoDAO() {
+        if (conexao == null) {
+            throw new IllegalStateException("Abra uma conexão antes de criar um DAO.");
+        } else {
+            return new AplicacaoDAO(conexao);
         }
     }
 
