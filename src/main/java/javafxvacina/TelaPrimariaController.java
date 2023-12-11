@@ -24,6 +24,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import javafx.stage.Stage;
@@ -365,10 +366,21 @@ public class TelaPrimariaController implements Initializable {
         Aplicacao aplicacao = new Aplicacao(LocalDate.now(), pessoa, vacina);
         if (vacina == null || pessoa == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
             alert.setContentText("Selecione uma vacina e uma pessoa!");
             alert.showAndWait();
             return;
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Aplicar Vacina");
+            alert.setHeaderText("Aplicar Vacina");
+            alert.setContentText("Tem certeza que deseja aplicar a vacina nessa pessoa?");
+            alert.showAndWait();
+            if (alert.getResult().getText().equals("Cancel")) {
+               return;
+            }
         }
+
         
         DAOFactory daoFactory = new DAOFactory();
 

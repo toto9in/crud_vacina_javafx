@@ -1,10 +1,13 @@
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/VacinaDAO.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/TelaPrimariaController.java
-/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/PrimaryController.java
-/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/SecondaryController.java
-/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/DAOFactory.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/TelaSecundariaController.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/module-info.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/PessoaDAO.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/App.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/ConexaoFactory.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/AplicacaoDAO.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/Aplicacao.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/Situacao.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/dao/DAOFactory.java
+/home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/Pessoa.java
 /home/toto9/Studies/Poov_IFTM/javafxvacina/src/main/java/javafxvacina/models/Vacina.java
