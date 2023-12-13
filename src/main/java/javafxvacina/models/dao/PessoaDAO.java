@@ -48,11 +48,11 @@ public class PessoaDAO {
             ateDataDate = Date.valueOf(ateData);
         } else {
             if (dataNascimento != "") {
-                sql += " datanascimento = ? AND";
+                sql += " datanascimento >= ? AND";
                 dataNascimentoDate = Date.valueOf(dataNascimento);
             }
             if (ateData != "") {
-                sql += " datanascimento = ? AND";
+                sql += " datanascimento <= ? AND";
                 ateDataDate = Date.valueOf(ateData);
             }
         }

@@ -61,7 +61,7 @@ public class TelaSecundariaController {
     }
 
     private Boolean validarCampos() {
-        return !
+        return 
         !nome2TextFIeld.getText().isEmpty() &&
         !descricao2TextField.getText().isEmpty();
     }
@@ -95,7 +95,7 @@ public class TelaSecundariaController {
             }
         } else {
             if(validarCampos()) {
-                vacina = new Vacina(nome2TextFIeld.getText(), descricao2TextField.getText());
+                vacina = new Vacina(Long.parseLong(codigo2TextFIeld.getText()),nome2TextFIeld.getText(), descricao2TextField.getText());
                 System.out.println(vacina);
                 //nao precisa necessariamente criar o objeto vacina e salvar os dados nele
                 //mas por boas praticas irei pegar os valores do objeto vacina

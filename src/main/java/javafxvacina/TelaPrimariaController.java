@@ -192,7 +192,7 @@ public class TelaPrimariaController implements Initializable {
             // nos inputs de codigo
             codigoPessoaTextField.setTextFormatter(
                     new TextFormatter<>(change -> change.getControlNewText().matches("[0-9]*") ? change : null));
-            codigoPessoaTextField.setTextFormatter(
+            codigoTextField.setTextFormatter(
                     new TextFormatter<>(change -> change.getControlNewText().matches("[0-9]*") ? change : null));
             // Chama a função buscarTodasVacinas e preenche a tabela com os valores das
             // Chama a função buscarTodasVacinas e preenche a tabela com os valores das
@@ -323,6 +323,8 @@ public class TelaPrimariaController implements Initializable {
         } catch (SQLException e) {
             DAOFactory.mostrarSQLException(e);
         } finally {
+            vacina = null;
+            controllerTelaSecundaria.setVacina(null);
             daoFactory.fecharConexao();
         }
 
@@ -470,12 +472,13 @@ public class TelaPrimariaController implements Initializable {
         } catch (SQLException e) {
             DAOFactory.mostrarSQLException(e);
         } finally {
+            vacina = null;
             daoFactory.fecharConexao();
         }
 
     }
 
-    protected static List<Vacina> buscarTodasVacinas() {
+    protected List<Vacina> buscarTodasVacinas() {
         DAOFactory daoFactory = new DAOFactory();
         try {
             daoFactory.abrirConexao();
@@ -491,11 +494,12 @@ public class TelaPrimariaController implements Initializable {
         } finally {
             daoFactory.fecharConexao();
         }
+        
         return null;
 
     }
 
-    protected static List<Pessoa> buscarTodasPessoas() {
+    protected List<Pessoa> buscarTodasPessoas() {
         DAOFactory daoFactory = new DAOFactory();
         try {
             daoFactory.abrirConexao();
@@ -511,6 +515,7 @@ public class TelaPrimariaController implements Initializable {
         } finally {
             daoFactory.fecharConexao();
         }
+        
         return null;
 
     }

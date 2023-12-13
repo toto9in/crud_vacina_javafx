@@ -157,7 +157,9 @@ public class VacinaDAO {
         }
         rs.close();
         stmt.close();
+        
 
         return vacinas;
+
     }
 }
